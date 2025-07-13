@@ -241,16 +241,11 @@ export default function Home() {
                   <h4 className="text-2xl font-bold text-neutral-dark">Washing Machine Repair</h4>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1603712725038-7cd6b6e42b0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Modern washing machine being serviced by technician" 
-                    className="rounded-lg w-full h-48 object-cover" 
-                  />
-                  <img 
-                    src="https://images.unsplash.com/photo-1574269910020-8a1b15b9f135?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Washing machine drum and internal components" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    src="/attached_assets/56f253be-4a87-4075-9de3-de3bb13603c5_1752432325601.jpeg" 
+                    alt="Washing machine repair service" 
+                    className="rounded-lg w-full h-64 object-cover" 
                   />
                 </div>
 
@@ -290,16 +285,11 @@ export default function Home() {
                   <h4 className="text-2xl font-bold text-neutral-dark">Refrigerator Repair</h4>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Modern refrigerator with open door showing interior" 
-                    className="rounded-lg w-full h-48 object-cover" 
-                  />
-                  <img 
-                    src="https://images.unsplash.com/photo-1540622696862-d8a35eea89c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Refrigerator compressor and cooling system maintenance" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    src="/attached_assets/3a107325-79ae-420b-8227-a327a839dbb8_1752432325602.jpeg" 
+                    alt="Refrigerator repair service" 
+                    className="rounded-lg w-full h-64 object-cover" 
                   />
                 </div>
 
