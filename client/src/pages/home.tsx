@@ -573,7 +573,7 @@ Best regards`;
                       </div>
                       <div>
                         <h5 className="font-semibold text-neutral-dark">Phone</h5>
-                        <p className="text-neutral-medium">+254 700 123 456</p>
+                        <p className="text-neutral-medium">+254 768 028 298</p>
                         <p className="text-sm text-accent">Quick Response Service</p>
                       </div>
                     </div>
