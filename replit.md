@@ -8,6 +8,14 @@ This is a full-stack web application for an appliance repair service company. Th
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+### January 2025
+- Removed emergency service references from navigation and business hours per user request
+- Updated all service images to be more relevant to appliance repair (washing machines, refrigerators)
+- Changed business model to standard hours (Sunday closed) instead of 24/7 emergency availability
+- Maintained professional service focus on washing machine and refrigerator repair in Nairobi
+
 ## System Architecture
 
 ### Frontend Architecture

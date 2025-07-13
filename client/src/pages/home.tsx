@@ -132,10 +132,6 @@ export default function Home() {
               <button onClick={() => scrollToSection('contact')} className="text-neutral-dark hover:text-primary px-3 py-2 text-sm font-medium transition duration-200">
                 Contact
               </button>
-              <a href="tel:+254700123456" className="bg-emergency text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-600 transition duration-200 flex items-center">
-                <Phone className="mr-1" size={16} />
-                Emergency
-              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -158,7 +154,6 @@ export default function Home() {
                 <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 text-neutral-dark hover:text-primary">About</button>
                 <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left px-3 py-2 text-neutral-dark hover:text-primary">Reviews</button>
                 <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-neutral-dark hover:text-primary">Contact</button>
-                <a href="tel:+254700123456" className="block bg-emergency text-white px-3 py-2 rounded-lg mt-2">Emergency</a>
               </div>
             </div>
           )}
@@ -168,7 +163,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary to-blue-800 text-white">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
-             style={{backgroundImage: "url('https://images.unsplash.com/photo-1611348586804-61bf6c080437?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"}}></div>
+             style={{backgroundImage: "url('https://images.unsplash.com/photo-1603712725038-7cd6b6e42b0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"}}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -203,7 +198,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <Clock className="text-accent mr-2" size={20} />
-                  <span>24/7 Emergency</span>
+                  <span>Quick Response</span>
                 </div>
                 <div className="flex items-center">
                   <Star className="text-accent mr-2" size={20} />
@@ -213,8 +208,8 @@ export default function Home() {
             </div>
             <div className="hidden lg:block">
               <img 
-                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Professional appliance technician repairing equipment" 
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Professional technician repairing washing machine" 
                 className="rounded-xl shadow-2xl w-full h-auto" 
               />
             </div>
@@ -248,13 +243,13 @@ export default function Home() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Technician repairing washing machine" 
+                    src="https://images.unsplash.com/photo-1603712725038-7cd6b6e42b0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                    alt="Modern washing machine being serviced by technician" 
                     className="rounded-lg w-full h-48 object-cover" 
                   />
                   <img 
-                    src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Washing machine diagnostic work" 
+                    src="https://images.unsplash.com/photo-1574269910020-8a1b15b9f135?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                    alt="Washing machine drum and internal components" 
                     className="rounded-lg w-full h-48 object-cover" 
                   />
                 </div>
@@ -297,13 +292,13 @@ export default function Home() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Technician repairing refrigerator compressor" 
+                    src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                    alt="Modern refrigerator with open door showing interior" 
                     className="rounded-lg w-full h-48 object-cover" 
                   />
                   <img 
-                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                    alt="Refrigerator internal component repair" 
+                    src="https://images.unsplash.com/photo-1540622696862-d8a35eea89c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                    alt="Refrigerator compressor and cooling system maintenance" 
                     className="rounded-lg w-full h-48 object-cover" 
                   />
                 </div>
@@ -689,7 +684,7 @@ export default function Home() {
                       <div>
                         <h5 className="font-semibold text-neutral-dark">Phone</h5>
                         <p className="text-neutral-medium">+254 700 123 456</p>
-                        <p className="text-sm text-accent">24/7 Emergency Line</p>
+                        <p className="text-sm text-accent">Quick Response Service</p>
                       </div>
                     </div>
                     
@@ -729,13 +724,13 @@ export default function Home() {
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
-                    <span>Emergency Only</span>
+                    <span>Closed</span>
                   </div>
                 </div>
-                <div className="mt-6 p-4 bg-emergency rounded-lg">
+                <div className="mt-6 p-4 bg-accent rounded-lg">
                   <div className="flex items-center">
-                    <AlertTriangle className="mr-2" size={20} />
-                    <span className="font-semibold">Emergency Service Available 24/7</span>
+                    <CheckCircle className="mr-2" size={20} />
+                    <span className="font-semibold">Same Day Service Available</span>
                   </div>
                 </div>
               </div>
@@ -778,7 +773,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-300">
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Washing Machine Repair</button></li>
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Refrigerator Repair</button></li>
-                <li><a href="tel:+254700123456" className="hover:text-accent transition duration-200">Emergency Service</a></li>
+                <li><button onClick={() => scrollToSection('contact')} className="hover:text-accent transition duration-200">Get Quote</button></li>
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Maintenance Plans</button></li>
               </ul>
             </div>
