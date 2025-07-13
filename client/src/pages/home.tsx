@@ -243,7 +243,7 @@ export default function Home() {
                 
                 <div className="mb-6">
                   <img 
-                    src="/attached_assets/56f253be-4a87-4075-9de3-de3bb13603c5_1752432325601.jpeg" 
+                    src="/images/washing-machine.jpeg" 
                     alt="Washing machine repair service" 
                     className="rounded-lg w-full h-64 object-cover" 
                   />
@@ -287,7 +287,7 @@ export default function Home() {
                 
                 <div className="mb-6">
                   <img 
-                    src="/attached_assets/3a107325-79ae-420b-8227-a327a839dbb8_1752432325602.jpeg" 
+                    src="/images/refrigerator.jpeg" 
                     alt="Refrigerator repair service" 
                     className="rounded-lg w-full h-64 object-cover" 
                   />
