@@ -146,7 +146,7 @@ Best regards`;
                   </a>
                 </Button>
                 <Button variant="outline" asChild className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary bg-transparent">
-                  <a href="tel:+254700123456" className="text-white hover:text-primary">
+                  <a href="tel:+254768028298" className="text-white hover:text-primary">
                     <Phone className="mr-2" size={20} />
                     Call Now
                   </a>
