@@ -15,6 +15,11 @@ Preferred communication style: Simple, everyday language.
 - Updated all service images to be more relevant to appliance repair (washing machines, refrigerators)
 - Changed business model to standard hours (Sunday closed) instead of 24/7 emergency availability
 - Maintained professional service focus on washing machine and refrigerator repair in Nairobi
+- Fixed "Call Now" button visibility issue in hero section
+- Integrated user-uploaded images for service sections (washing machine and refrigerator)
+- Added Vercel deployment configuration with serverless functions
+- Created individual API endpoints for service requests compatible with Vercel
+- Added comprehensive deployment documentation in README.md
 
 ## System Architecture
 
