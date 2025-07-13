@@ -683,7 +683,7 @@ export default function Home() {
                         <Mail size={20} />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-neutral-dark">Email</h5>
+                        <h5 className="font-semibold text-neutral-dark">Email Address</h5>
                         <p className="text-neutral-medium">info@homeofficefixology.co.ke</p>
                       </div>
                     </div>
