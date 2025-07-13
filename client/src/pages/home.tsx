@@ -773,7 +773,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center">
                   <Phone className="mr-2 text-accent" size={16} />
-                  +254 700 123 456
+                  +254 768 028 298
                 </li>
                 <li className="flex items-center">
                   <Mail className="mr-2 text-accent" size={16} />
@@ -788,7 +788,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 Home & Office Fixology. All rights reserved.</p>
+            <p>&copy; 2025 Home & Office Fixology. All rights reserved.</p>
           </div>
         </div>
       </footer>
