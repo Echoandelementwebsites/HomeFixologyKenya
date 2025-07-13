@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useMutation } from "@tanstack/react-query";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { 
   Phone, 
@@ -29,7 +22,6 @@ import {
   Bolt,
   Calendar,
   PhoneCall,
-  Send,
   Menu,
   X,
   Facebook,
@@ -41,60 +33,31 @@ import {
   CheckCircle
 } from "lucide-react";
 
-interface ServiceRequestForm {
-  name: string;
-  phone: string;
-  email: string;
-  appliance: string;
-  area: string;
-  description: string;
-}
-
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [formData, setFormData] = useState<ServiceRequestForm>({
-    name: "",
-    phone: "",
-    email: "",
-    appliance: "",
-    area: "",
-    description: ""
-  });
-  
   const isMobile = useIsMobile();
-  const { toast } = useToast();
 
-  const submitServiceRequest = useMutation({
-    mutationFn: async (data: ServiceRequestForm) => {
-      const response = await apiRequest("POST", "/api/service-request", data);
-      return response.json();
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Service Request Submitted",
-        description: data.message,
-      });
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        appliance: "",
-        area: "",
-        description: ""
-      });
-    },
-    onError: (error) => {
-      toast({
-        title: "Submission Failed",
-        description: "Please check your information and try again.",
-        variant: "destructive",
-      });
-    },
-  });
+  // Create mailto link with pre-filled service request template
+  const createEmailLink = () => {
+    const email = "info@homeofficefixology.co.ke";
+    const subject = "Appliance Repair Service Request";
+    const body = `Hello Home & Office Fixology,
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    submitServiceRequest.mutate(formData);
+I would like to request appliance repair service.
+
+Please provide the following details:
+- Your Name:
+- Phone Number:
+- Email Address:
+- Appliance Type (Washing Machine/Refrigerator):
+- Service Area in Nairobi:
+- Problem Description:
+
+Thank you for your service!
+
+Best regards`;
+
+    return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -176,9 +139,11 @@ export default function Home() {
                 Fast, reliable, and guaranteed solutions for your home and office.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button onClick={() => scrollToSection('contact')} className="bg-accent text-white px-8 py-4 text-lg font-semibold hover:bg-green-600">
-                  <Calendar className="mr-2" size={20} />
-                  Book Service
+                <Button asChild className="bg-accent text-white px-8 py-4 text-lg font-semibold hover:bg-green-600">
+                  <a href={createEmailLink()}>
+                    <Mail className="mr-2" size={20} />
+                    Email Us for Service
+                  </a>
                 </Button>
                 <Button variant="outline" asChild className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary bg-transparent">
                   <a href="tel:+254700123456" className="text-white hover:text-primary">
@@ -268,8 +233,11 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="text-center">
-                  <Button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-6 py-3 font-semibold hover:bg-blue-700">
-                    Get Quote
+                  <Button asChild className="bg-primary text-white px-6 py-3 font-semibold hover:bg-blue-700">
+                    <a href={createEmailLink()}>
+                      <Mail className="mr-2" size={16} />
+                      Get Quote
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -312,8 +280,11 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="text-center">
-                  <Button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-6 py-3 font-semibold hover:bg-blue-700">
-                    Get Quote
+                  <Button asChild className="bg-primary text-white px-6 py-3 font-semibold hover:bg-blue-700">
+                    <a href={createEmailLink()}>
+                      <Mail className="mr-2" size={16} />
+                      Get Quote
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -558,105 +529,34 @@ export default function Home() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Email Contact */}
             <Card className="bg-white shadow-lg">
               <CardContent className="p-8">
                 <h4 className="text-2xl font-bold text-neutral-dark mb-6">Request Service</h4>
-                <form onSubmit={handleSubmit}>
-                  <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <Label htmlFor="name" className="text-sm font-medium text-neutral-dark mb-2">Full Name</Label>
-                      <Input
-                        id="name"
-                        type="text"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Your full name"
-                        required
-                        className="mt-2"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="phone" className="text-sm font-medium text-neutral-dark mb-2">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+254 700 123 456"
-                        required
-                        className="mt-2"
-                      />
-                    </div>
+                <div className="text-center">
+                  <div className="bg-primary text-white p-6 rounded-lg mb-6">
+                    <Mail size={48} className="mx-auto mb-4" />
+                    <h5 className="text-xl font-semibold mb-2">Contact Us via Email</h5>
+                    <p className="text-blue-100">
+                      Click the button below to send us an email with your service request details
+                    </p>
                   </div>
-                  <div className="mb-4">
-                    <Label htmlFor="email" className="text-sm font-medium text-neutral-dark mb-2">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="your@email.com"
-                      required
-                      className="mt-2"
-                    />
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <Label htmlFor="appliance" className="text-sm font-medium text-neutral-dark mb-2">Appliance Type</Label>
-                      <Select value={formData.appliance} onValueChange={(value) => setFormData({ ...formData, appliance: value })}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select appliance" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="washing-machine">Washing Machine</SelectItem>
-                          <SelectItem value="refrigerator">Refrigerator/Fridge</SelectItem>
-                          <SelectItem value="both">Both</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div>
-                      <Label htmlFor="area" className="text-sm font-medium text-neutral-dark mb-2">Service Area</Label>
-                      <Select value={formData.area} onValueChange={(value) => setFormData({ ...formData, area: value })}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select area" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="westlands">Westlands</SelectItem>
-                          <SelectItem value="karen">Karen</SelectItem>
-                          <SelectItem value="kilimani">Kilimani</SelectItem>
-                          <SelectItem value="lavington">Lavington</SelectItem>
-                          <SelectItem value="runda">Runda</SelectItem>
-                          <SelectItem value="kileleshwa">Kileleshwa</SelectItem>
-                          <SelectItem value="parklands">Parklands</SelectItem>
-                          <SelectItem value="south-bc">South B/C</SelectItem>
-                          <SelectItem value="kasarani">Kasarani</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <Label htmlFor="description" className="text-sm font-medium text-neutral-dark mb-2">Problem Description</Label>
-                    <Textarea
-                      id="description"
-                      value={formData.description}
-                      onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                      placeholder="Describe the issue with your appliance..."
-                      required
-                      rows={4}
-                      className="mt-2"
-                    />
-                  </div>
+                  
                   <Button 
-                    type="submit" 
-                    className="w-full bg-primary text-white px-6 py-4 font-semibold hover:bg-blue-700"
-                    disabled={submitServiceRequest.isPending}
+                    asChild
+                    className="w-full bg-accent text-white px-8 py-4 text-lg font-semibold hover:bg-green-600 mb-4"
                   >
-                    <Send className="mr-2" size={20} />
-                    {submitServiceRequest.isPending ? "Submitting..." : "Submit Service Request"}
+                    <a href={createEmailLink()}>
+                      <Mail className="mr-2" size={20} />
+                      Send Service Request Email
+                    </a>
                   </Button>
-                </form>
+                  
+                  <div className="text-sm text-neutral-medium">
+                    <p className="mb-2">This will open your email client with a pre-filled template.</p>
+                    <p>Just add your details and send - we'll respond within 30 minutes!</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
@@ -763,7 +663,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-300">
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Washing Machine Repair</button></li>
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Refrigerator Repair</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="hover:text-accent transition duration-200">Get Quote</button></li>
+                <li><a href={createEmailLink()} className="hover:text-accent transition duration-200">Get Quote</a></li>
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Maintenance Plans</button></li>
               </ul>
             </div>
