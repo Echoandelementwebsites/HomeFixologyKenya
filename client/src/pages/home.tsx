@@ -738,7 +738,7 @@ Best regards`;
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
-                    <span>8:00 AM - 4:00 PM</span>
+                    <span>12:00 PM - 4:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
