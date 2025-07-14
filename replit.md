@@ -20,6 +20,12 @@ Preferred communication style: Simple, everyday language.
 - Added Vercel deployment configuration with serverless functions
 - Created individual API endpoints for service requests compatible with Vercel
 - Added comprehensive deployment documentation in README.md
+- Replaced complex contact form with simple email-based contact system
+- **Expanded services to include 5 core offerings**: Washing Machine Repair, Refrigerator Repair, Generator Repair, Solar Installation, and Air Conditioning
+- Updated services section with 3-column responsive grid layout for all 5 services
+- Added user-provided images for new services (generator, solar, air conditioning)
+- Updated hero section and email template to reflect expanded service offerings
+- Enhanced footer navigation with all new services listed
 
 ## System Architecture
 

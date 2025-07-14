@@ -30,7 +30,13 @@ import {
   Linkedin,
   AlertTriangle,
   Tag,
-  CheckCircle
+  CheckCircle,
+  Power,
+  Sun,
+  Wind,
+  Settings,
+  Battery,
+  Gauge
 } from "lucide-react";
 
 export default function Home() {
@@ -40,20 +46,21 @@ export default function Home() {
   // Create mailto link with pre-filled service request template
   const createEmailLink = () => {
     const email = "info@homeofficefixology.co.ke";
-    const subject = "Appliance Repair Service Request";
+    const subject = "Service Request - Home & Office Fixology";
     const body = `Hello Home & Office Fixology,
 
-I would like to request appliance repair service.
+I would like to request service for my appliance/equipment.
 
 Please provide the following details:
 - Your Name:
 - Phone Number:
 - Email Address:
-- Appliance Type (Washing Machine/Refrigerator):
+- Service Type (Washing Machine/Refrigerator/Generator/Solar/Air Conditioning):
 - Service Area in Nairobi:
 - Problem Description:
+- Preferred Service Time:
 
-Thank you for your service!
+Thank you for your professional service!
 
 Best regards`;
 
@@ -135,8 +142,8 @@ Best regards`;
                 <span className="text-accent">Nairobi</span>
               </h2>
               <p className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed">
-                Professional washing machine and refrigerator repair services. 
-                Fast, reliable, and guaranteed solutions for your home and office.
+                Professional appliance repair, generator service, solar installation, and air conditioning solutions. 
+                Fast, reliable, and guaranteed services for your home and office.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button asChild className="bg-accent text-white px-8 py-4 text-lg font-semibold hover:bg-green-600">
@@ -195,47 +202,43 @@ Best regards`;
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {/* Washing Machine Service */}
             <Card className="bg-neutral-light shadow-lg hover:shadow-xl transition duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary text-white p-4 rounded-lg mr-4">
-                    <Wrench size={32} />
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent text-white p-3 rounded-lg mr-3">
+                    <Wrench size={24} />
                   </div>
-                  <h4 className="text-2xl font-bold text-neutral-dark">Washing Machine Repair</h4>
+                  <h4 className="text-xl font-bold text-neutral-dark">Washing Machine Repair</h4>
                 </div>
                 
-                <div className="mb-6">
+                <div className="mb-4">
                   <img 
                     src="/images/washing-machine.jpeg" 
                     alt="Washing machine repair service" 
-                    className="rounded-lg w-full h-64 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover" 
                   />
                 </div>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 mb-4 text-sm">
                   <li className="flex items-center text-neutral-dark">
-                    <Wrench className="text-accent mr-3" size={20} />
+                    <Wrench className="text-accent mr-2" size={16} />
                     <span>Drum and motor repairs</span>
                   </li>
                   <li className="flex items-center text-neutral-dark">
-                    <Droplets className="text-accent mr-3" size={20} />
+                    <Droplets className="text-accent mr-2" size={16} />
                     <span>Drainage and pump issues</span>
                   </li>
                   <li className="flex items-center text-neutral-dark">
-                    <Cpu className="text-accent mr-3" size={20} />
+                    <Cpu className="text-accent mr-2" size={16} />
                     <span>Control panel and electronics</span>
-                  </li>
-                  <li className="flex items-center text-neutral-dark">
-                    <DoorOpen className="text-accent mr-3" size={20} />
-                    <span>Door and seal replacement</span>
                   </li>
                 </ul>
                 <div className="text-center">
-                  <Button asChild className="bg-primary text-white px-6 py-3 font-semibold hover:bg-blue-700">
+                  <Button asChild className="bg-primary text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700">
                     <a href={createEmailLink()}>
-                      <Mail className="mr-2" size={16} />
+                      <Mail className="mr-2" size={14} />
                       Get Quote
                     </a>
                   </Button>
@@ -245,44 +248,169 @@ Best regards`;
 
             {/* Refrigerator Service */}
             <Card className="bg-neutral-light shadow-lg hover:shadow-xl transition duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary text-white p-4 rounded-lg mr-4">
-                    <Snowflake size={32} />
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-primary text-white p-3 rounded-lg mr-3">
+                    <Snowflake size={24} />
                   </div>
-                  <h4 className="text-2xl font-bold text-neutral-dark">Refrigerator Repair</h4>
+                  <h4 className="text-xl font-bold text-neutral-dark">Refrigerator Repair</h4>
                 </div>
                 
-                <div className="mb-6">
+                <div className="mb-4">
                   <img 
                     src="/images/refrigerator.jpeg" 
                     alt="Refrigerator repair service" 
-                    className="rounded-lg w-full h-64 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover" 
                   />
                 </div>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 mb-4 text-sm">
                   <li className="flex items-center text-neutral-dark">
-                    <Thermometer className="text-accent mr-3" size={20} />
+                    <Thermometer className="text-accent mr-2" size={16} />
                     <span>Temperature control issues</span>
                   </li>
                   <li className="flex items-center text-neutral-dark">
-                    <Fan className="text-accent mr-3" size={20} />
+                    <Fan className="text-accent mr-2" size={16} />
                     <span>Compressor and cooling system</span>
                   </li>
                   <li className="flex items-center text-neutral-dark">
-                    <Zap className="text-accent mr-3" size={20} />
+                    <Zap className="text-accent mr-2" size={16} />
                     <span>Electrical and defrost problems</span>
-                  </li>
-                  <li className="flex items-center text-neutral-dark">
-                    <Bolt className="text-accent mr-3" size={20} />
-                    <span>Ice maker and water dispenser</span>
                   </li>
                 </ul>
                 <div className="text-center">
-                  <Button asChild className="bg-primary text-white px-6 py-3 font-semibold hover:bg-blue-700">
+                  <Button asChild className="bg-primary text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700">
                     <a href={createEmailLink()}>
-                      <Mail className="mr-2" size={16} />
+                      <Mail className="mr-2" size={14} />
+                      Get Quote
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Generator Service */}
+            <Card className="bg-neutral-light shadow-lg hover:shadow-xl transition duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent text-white p-3 rounded-lg mr-3">
+                    <Power size={24} />
+                  </div>
+                  <h4 className="text-xl font-bold text-neutral-dark">Generator Repair</h4>
+                </div>
+                
+                <div className="mb-4">
+                  <img 
+                    src="/images/generator.jpg" 
+                    alt="Generator repair service" 
+                    className="rounded-lg w-full h-48 object-cover" 
+                  />
+                </div>
+
+                <ul className="space-y-2 mb-4 text-sm">
+                  <li className="flex items-center text-neutral-dark">
+                    <Power className="text-accent mr-2" size={16} />
+                    <span>Engine and alternator repairs</span>
+                  </li>
+                  <li className="flex items-center text-neutral-dark">
+                    <Settings className="text-accent mr-2" size={16} />
+                    <span>Control panel diagnostics</span>
+                  </li>
+                  <li className="flex items-center text-neutral-dark">
+                    <Wrench className="text-accent mr-2" size={16} />
+                    <span>Maintenance and servicing</span>
+                  </li>
+                </ul>
+                <div className="text-center">
+                  <Button asChild className="bg-primary text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700">
+                    <a href={createEmailLink()}>
+                      <Mail className="mr-2" size={14} />
+                      Get Quote
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Solar Service */}
+            <Card className="bg-neutral-light shadow-lg hover:shadow-xl transition duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-primary text-white p-3 rounded-lg mr-3">
+                    <Sun size={24} />
+                  </div>
+                  <h4 className="text-xl font-bold text-neutral-dark">Solar Installation</h4>
+                </div>
+                
+                <div className="mb-4">
+                  <img 
+                    src="/images/solar.jpg" 
+                    alt="Solar installation service" 
+                    className="rounded-lg w-full h-48 object-cover" 
+                  />
+                </div>
+
+                <ul className="space-y-2 mb-4 text-sm">
+                  <li className="flex items-center text-neutral-dark">
+                    <Sun className="text-accent mr-2" size={16} />
+                    <span>Solar panel installation</span>
+                  </li>
+                  <li className="flex items-center text-neutral-dark">
+                    <Battery className="text-accent mr-2" size={16} />
+                    <span>Battery backup systems</span>
+                  </li>
+                  <li className="flex items-center text-neutral-dark">
+                    <Zap className="text-accent mr-2" size={16} />
+                    <span>Inverter setup and maintenance</span>
+                  </li>
+                </ul>
+                <div className="text-center">
+                  <Button asChild className="bg-primary text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700">
+                    <a href={createEmailLink()}>
+                      <Mail className="mr-2" size={14} />
+                      Get Quote
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Air Conditioning Service */}
+            <Card className="bg-neutral-light shadow-lg hover:shadow-xl transition duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent text-white p-3 rounded-lg mr-3">
+                    <Wind size={24} />
+                  </div>
+                  <h4 className="text-xl font-bold text-neutral-dark">Air Conditioning</h4>
+                </div>
+                
+                <div className="mb-4">
+                  <img 
+                    src="/images/air-conditioning.jpg" 
+                    alt="Air conditioning repair service" 
+                    className="rounded-lg w-full h-48 object-cover" 
+                  />
+                </div>
+
+                <ul className="space-y-2 mb-4 text-sm">
+                  <li className="flex items-center text-neutral-dark">
+                    <Wind className="text-accent mr-2" size={16} />
+                    <span>AC installation and repair</span>
+                  </li>
+                  <li className="flex items-center text-neutral-dark">
+                    <Thermometer className="text-accent mr-2" size={16} />
+                    <span>Temperature control issues</span>
+                  </li>
+                  <li className="flex items-center text-neutral-dark">
+                    <Settings className="text-accent mr-2" size={16} />
+                    <span>Regular maintenance service</span>
+                  </li>
+                </ul>
+                <div className="text-center">
+                  <Button asChild className="bg-primary text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700">
+                    <a href={createEmailLink()}>
+                      <Mail className="mr-2" size={14} />
                       Get Quote
                     </a>
                   </Button>
@@ -663,8 +791,10 @@ Best regards`;
               <ul className="space-y-2 text-gray-300">
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Washing Machine Repair</button></li>
                 <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Refrigerator Repair</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Generator Repair</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Solar Installation</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Air Conditioning</button></li>
                 <li><a href={createEmailLink()} className="hover:text-accent transition duration-200">Get Quote</a></li>
-                <li><button onClick={() => scrollToSection('services')} className="hover:text-accent transition duration-200">Maintenance Plans</button></li>
               </ul>
             </div>
             
