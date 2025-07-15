@@ -799,7 +799,7 @@ Best regards`;
             </div>
             
             <div>
-              <h5 className="font-semibold mb-4">Contact</h5>
+              <h5 className="font-semibold mb-4">Contact </h5>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center">
                   <Phone className="mr-2 text-accent" size={16} />
