@@ -45,7 +45,7 @@ export default function Home() {
 
   // Create mailto link with pre-filled service request template
   const createEmailLink = () => {
-    const email = "info@homeofficefixology.co.ke";
+    const email = "homeofficefixology@gmail.com";
     const subject = "Service Request - Home & Office Fixology";
     const body = `Hello Home & Office Fixology,
 
@@ -712,7 +712,7 @@ Best regards`;
                       </div>
                       <div>
                         <h5 className="font-semibold text-neutral-dark">Email Address</h5>
-                        <p className="text-neutral-medium">info@homeofficefixology.co.ke</p>
+                        <p className="text-neutral-medium">homeofficefixology@gmail.com</p>
                       </div>
                     </div>
                     
@@ -807,7 +807,7 @@ Best regards`;
                 </li>
                 <li className="flex items-center">
                   <Mail className="mr-2 text-accent" size={16} />
-                  info@homeofficefixology.co.ke
+                  homeofficefixology@gmail.com
                 </li>
                 <li className="flex items-center">
                   <MapPin className="mr-2 text-accent" size={16} />
