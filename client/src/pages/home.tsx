@@ -721,8 +721,9 @@ Best regards`;
                         <MapPin size={20} />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-neutral-dark">Service Area</h5>
-                        <p className="text-neutral-medium">Nairobi and surrounding areas</p>
+                        <h5 className="font-semibold text-neutral-dark">Location</h5>
+                        <p className="text-neutral-medium">Kingara Road, opposite Levels hotel</p>
+                        <p className="text-neutral-medium text-sm">Serving Nairobi and surrounding areas</p>
                       </div>
                     </div>
                   </div>
@@ -811,7 +812,7 @@ Best regards`;
                 </li>
                 <li className="flex items-center">
                   <MapPin className="mr-2 text-accent" size={16} />
-                  Nairobi, Kenya
+                  Kingara Road, opposite Levels hotel, Nairobi
                 </li>
               </ul>
             </div>
