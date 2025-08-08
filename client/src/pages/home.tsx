@@ -681,7 +681,7 @@ Best regards`;
                   </Button>
                   
                   <div className="text-sm text-neutral-medium">
-                    <p className="mb-2">This will open your email client with a pre-filled template.</p>
+                    <p className="mb-2">This will open your email client with a pre-filled template ready for use.</p>
                     <p>Just add your details and send - we'll respond within 30 minutes!</p>
                   </div>
                 </div>
