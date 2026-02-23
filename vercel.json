@@ -23,6 +23,14 @@
       "dest": "/api/service-requests.js"
     },
     {
+      "src": "/sitemap.xml",
+      "dest": "/api/sitemap.js"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/api/robots.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     }
