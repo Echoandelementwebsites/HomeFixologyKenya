@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { 
   Phone, 
   Mail, 
@@ -15,33 +14,28 @@ import {
   Snowflake,
   Droplets,
   Cpu,
-  DoorOpen,
   Thermometer,
   Fan,
   Zap,
   Bolt,
   Calendar,
-  PhoneCall,
   Menu,
   X,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
-  AlertTriangle,
   Tag,
   CheckCircle,
   Power,
   Sun,
   Wind,
   Settings,
-  Battery,
-  Gauge
+  Battery
 } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
 
   // Create mailto link with pre-filled service request template
   const createEmailLink = () => {
@@ -82,10 +76,10 @@ Best regards`;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-xl font-bold text-primary flex items-center">
+              <div className="text-xl font-bold text-primary flex items-center" role="heading" aria-level={2}>
                 <Bolt className="mr-2" size={24} />
                 Home & Office Fixology
-              </h1>
+              </div>
             </div>
             
             {/* Desktop Navigation */}
@@ -137,10 +131,10 @@ Best regards`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Expert Appliance Repair in{" "}
                 <span className="text-accent">Nairobi</span>
-              </h2>
+              </h1>
               <p className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed">
                 Professional appliance repair, generator service, solar installation, and air conditioning solutions. 
                 Fast, reliable, and guaranteed services for your home and office.
@@ -181,7 +175,7 @@ Best regards`;
             <div className="hidden lg:block">
               <img 
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Professional technician repairing washing machine" 
+                alt="Professional appliance repair technician repairing washing machine"
                 className="rounded-xl shadow-2xl w-full h-auto" 
               />
             </div>
@@ -217,7 +211,8 @@ Best regards`;
                   <img 
                     src="/images/washing-machine.jpeg" 
                     alt="Washing machine repair service" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -260,7 +255,8 @@ Best regards`;
                   <img 
                     src="/images/refrigerator.jpeg" 
                     alt="Refrigerator repair service" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -303,7 +299,8 @@ Best regards`;
                   <img 
                     src="/images/generator.jpg" 
                     alt="Generator repair service" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -346,7 +343,8 @@ Best regards`;
                   <img 
                     src="/images/solar.jpg" 
                     alt="Solar installation service" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -389,7 +387,8 @@ Best regards`;
                   <img 
                     src="/images/air-conditioning.jpg" 
                     alt="Air conditioning repair service" 
-                    className="rounded-lg w-full h-48 object-cover" 
+                    className="rounded-lg w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -531,7 +530,8 @@ Best regards`;
               <img 
                 src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800" 
                 alt="Professional appliance repair technician with diagnostic tools" 
-                className="rounded-xl shadow-lg w-full h-auto" 
+                className="rounded-xl shadow-lg w-full h-auto"
+                loading="lazy"
               />
             </div>
           </div>
