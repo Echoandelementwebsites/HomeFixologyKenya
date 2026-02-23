@@ -10,6 +10,13 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
+  // TODO: SEC-01 Implement Admin Session Auth
+  const authHeader = req.headers.authorization;
+  // Placeholder logic matching server/routes.ts
+  if (!authHeader || authHeader !== "Bearer admin-secret") {
+     return res.status(401).json({ message: "Unauthorized: Access Denied" });
+  }
+
   if (req.method === 'GET') {
     try {
       const requests = await storage.getServiceRequests();
